@@ -2,6 +2,13 @@
 
 ![Portada](images/imagen.jpg)
 
+![Commits](https://img.shields.io/github/commit-activity/m/usuario/repositorio)
+![Último Commit](https://img.shields.io/github/last-commit/usuario/repositorio)
+![Issues Abiertas](https://img.shields.io/github/issues/usuario/repositorio)
+![Pull Requests](https://img.shields.io/github/issues-pr/usuario/repositorio)
+![Estrellas](https://img.shields.io/github/stars/usuario/repositorio)
+![Forks](https://img.shields.io/github/forks/usuario/repositorio)
+
 ## 🎯 Objectives
 The goal of this project is to develop a machine learning model that can accurately classify news articles as either fake or real. This helps in combating misinformation and promoting reliable information sources. 🌐
 
