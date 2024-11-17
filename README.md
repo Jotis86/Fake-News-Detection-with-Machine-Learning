@@ -68,13 +68,20 @@ These visualizations help in comparing the models and understanding their streng
   - F1-Score: 0.9384 ⚖️
 
 ## 🗂️ Project Structure
-- App
-- Data
-- Notebook Cleaning
-- Notebook Machine Learning
+- `app`: Contains the Streamlit web application.
+- `data`: Contains the datasets used for training and testing.
+- `images`: Contains images used in the project.
+- `notebook_cleaning`: Contains Jupyter notebooks for data cleaning.
+- `notebook_machine_learning`: Contains Jupyter notebooks for machine learning model training and evaluation.
+- `README.md`: Project documentation.
 
 ## 🌐 Web App
-The project includes a Streamlit web application that allows users to input news articles and classify them as fake or real in real-time. The app performs the following steps:
+The project includes a Streamlit web application that allows users to input news articles and classify them as fake or real in real-time. The app has two sections:
+
+1. **Objectives**: Describes the goals and methodology of the project.
+2. **Text Analyzer**: Allows users to input news text and classify it as fake or real.
+
+The app performs the following steps:
 
 1. **Text Input**: Users can enter the news text they want to classify. 📝
 2. **Text Cleaning**: The app cleans the input text by removing stop words and punctuation. 🧹
@@ -86,7 +93,9 @@ The project includes a Streamlit web application that allows users to input news
 For any questions or suggestions, feel free to reach out! 📧
 
 - **Name**: Juan Duran Bon
-- **Email**: jotaduranbon@gmail.com
+- **Email**: [jotaduranbon@gmail.com](mailto:jotaduranbon@gmail.com)
+- **LinkedIn**: [Juan Duran Bon](https://www.linkedin.com/in/juan-duran-bon/)
+- **GitHub**: [Jotis86](https://github.com/Jotis86)
 
 
 
