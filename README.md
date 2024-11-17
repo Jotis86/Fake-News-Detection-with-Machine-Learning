@@ -2,12 +2,11 @@
 
 ![Portada](images/imagen.jpg)
 
-![Commits](https://img.shields.io/github/commit-activity/m/usuario/repositorio)
-![Último Commit](https://img.shields.io/github/last-commit/usuario/repositorio)
-![Issues Abiertas](https://img.shields.io/github/issues/usuario/repositorio)
-![Pull Requests](https://img.shields.io/github/issues-pr/usuario/repositorio)
-![Estrellas](https://img.shields.io/github/stars/usuario/repositorio)
-![Forks](https://img.shields.io/github/forks/usuario/repositorio)
+![Commits](https://img.shields.io/github/commit-activity/m/Jotis86/Fake-News-Detection-with-Machine-Learning)
+![Issues Abiertas](https://img.shields.io/github/issues/Jotis86/Fake-News-Detection-with-Machine-Learning)
+![Pull Requests](https://img.shields.io/github/issues-pr/Jotis86/Fake-News-Detection-with-Machine-Learning)
+![Forks](https://img.shields.io/github/forks/Jotis86/Fake-News-Detection-with-Machine-Learning)
+![Tamaño del Repositorio](https://img.shields.io/github/repo-size/Jotis86/Fake-News-Detection-with-Machine-Learning)
 
 ## 🎯 Objectives
 The goal of this project is to develop a machine learning model that can accurately classify news articles as either fake or real. This helps in combating misinformation and promoting reliable information sources. 🌐
