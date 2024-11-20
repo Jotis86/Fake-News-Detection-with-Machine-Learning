@@ -5,13 +5,22 @@ import nltk
 import re
 import numpy as np
 import joblib
+import os
 
 # Download NLTK stopwords
 nltk.download('stopwords')
 stop_words = set(nltk.corpus.stopwords.words('english'))
 
+# Construct the path to the pre-trained RandomForest model
+base_dir = os.path.dirname(os.path.abspath(__file__))
+model_path = os.path.join(base_dir, 'Notebook_Machine_Learning', 'random_forest_model.pkl')
+
+# Check if the model file exists
+if not os.path.exists(model_path):
+    raise FileNotFoundError(f"Model file not found: {model_path}")
+
 # Load the pre-trained RandomForest model
-rf_model = joblib.load('Notebook_Machine Learning/random_forest_model.pkl')
+rf_model = joblib.load(model_path)
 
 def clean_word(word: str) -> str:
     """Remove punctuation and lowercase a word"""
@@ -23,11 +32,11 @@ def clean_text(text: str) -> list[str]:
 
 # Set up the sidebar with radio buttons
 st.sidebar.title("Menú")
-st.sidebar.image("C:\\Users\\juane\\OneDrive\\Escritorio\\Proyectos Python\\Project Fake News\\images\\Cat.png", use_column_width=True)
+st.sidebar.image(os.path.join(base_dir, 'images', 'Cat.png'), use_column_width=True)
 menu_option = st.sidebar.radio("Selecciona una opción", ["Objetivos del Proyecto", "Analizador de Texto"])
 
 # Display the image at the top
-st.image("C:\\Users\\juane\\OneDrive\\Escritorio\\Proyectos Python\\Project Fake News\\images\\imagen.jpg", use_column_width=True)
+st.image(os.path.join(base_dir, 'images', 'imagen.jpg'), use_column_width=True)
 
 # Display content based on the menu selection
 if menu_option == "Objetivos del Proyecto":
