@@ -11,7 +11,7 @@ nltk.download('stopwords')
 stop_words = set(nltk.corpus.stopwords.words('english'))
 
 # Load the pre-trained RandomForest model
-rf_model = joblib.load('C:\\Users\\juane\\OneDrive\\Escritorio\\Proyectos Python\\Project Fake News\\Notebook_Machine Learning\\random_forest_model.pkl')
+rf_model = joblib.load('notebook_machine_learning/random_forest_model.pkl')
 
 def clean_word(word: str) -> str:
     """Remove punctuation and lowercase a word"""
