@@ -11,15 +11,14 @@ import os
 nltk.download('stopwords')
 stop_words = set(nltk.corpus.stopwords.words('english'))
 
-# Construct the path to the pre-trained RandomForest model
-base_dir = os.path.dirname(os.path.abspath(__file__))
-model_path = os.path.join(base_dir, 'Notebook_Machine_Learning', 'random_forest_model.pkl')
+# Ruta absoluta al modelo preentrenado RandomForest
+model_path = 'C:\\Users\\juane\\OneDrive\\Escritorio\\Proyectos Python\\Project Fake News\\Notebook_Machine_Learning\\random_forest_model.pkl'
 
-# Check if the model file exists
+# Verifica si el archivo del modelo existe
 if not os.path.exists(model_path):
     raise FileNotFoundError(f"Model file not found: {model_path}")
 
-# Load the pre-trained RandomForest model
+# Carga el modelo preentrenado RandomForest
 rf_model = joblib.load(model_path)
 
 def clean_word(word: str) -> str:
@@ -30,15 +29,15 @@ def clean_text(text: str) -> list[str]:
     """Remove stop words and punctuation from a whole text."""
     return [clean_word(word) for word in text.split() if clean_word(word) not in stop_words]
 
-# Set up the sidebar with radio buttons
+# Configura la barra lateral con botones de radio
 st.sidebar.title("Menú")
-st.sidebar.image(os.path.join(base_dir, 'images', 'Cat.png'), use_column_width=True)
+st.sidebar.image('C:\\Users\\juane\\OneDrive\\Escritorio\\Proyectos Python\\Project Fake News\\images\\Cat.png', use_column_width=True)
 menu_option = st.sidebar.radio("Selecciona una opción", ["Objetivos del Proyecto", "Analizador de Texto"])
 
-# Display the image at the top
-st.image(os.path.join(base_dir, 'images', 'imagen.jpg'), use_column_width=True)
+# Muestra la imagen en la parte superior
+st.image('C:\\Users\\juane\\OneDrive\\Escritorio\\Proyectos Python\\Project Fake News\\images\\imagen.jpg', use_column_width=True)
 
-# Display content based on the menu selection
+# Muestra el contenido basado en la selección del menú
 if menu_option == "Objetivos del Proyecto":
     st.title("Objetivos del Proyecto")
     st.write("""
@@ -65,9 +64,9 @@ elif menu_option == "Analizador de Texto":
         st.info("Cleaning text...")
         text_to_predict_clean = clean_text(text_to_predict)
         st.info("Vectorizing text...")
-        # Here you can add your own logic to vectorize the input text
-        # For example, you could use a pre-trained model or a different vectorization technique
-        text_to_predict_vectorized = np.zeros((1, rf_model.n_features_in_))  # Placeholder for vectorization
+        # Aquí puedes agregar tu propia lógica para vectorizar el texto de entrada
+        # Por ejemplo, podrías usar un modelo preentrenado o una técnica de vectorización diferente
+        text_to_predict_vectorized = np.zeros((1, rf_model.n_features_in_))  # Placeholder para la vectorización
         st.info("Classifying text...")
         is_real = rf_model.predict(text_to_predict_vectorized)[0]
 
